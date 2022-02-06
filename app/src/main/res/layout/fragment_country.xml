@@ -2,11 +2,75 @@
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-<FrameLayout
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.CountryFragment">
 
+    <ImageView
+        android:id="@+id/countryimageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:minHeight="200dp"
+        android:padding="2dp"
+        android:scaleType="fitCenter" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/countryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/countryimageView"
+        android:text="Name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:padding="2dp"/>
+
+    <TextView
+        android:id="@+id/countryCapital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/countryName"
+        android:text="Capital"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:padding="2dp"/>
+
+    <TextView
+        android:id="@+id/countryRegion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/countryCapital"
+        android:text="Region"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:padding="2dp"/>
+
+    <TextView
+        android:id="@+id/countryCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/countryRegion"
+        android:text="Currency"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:padding="2dp"/>
+
+    <TextView
+        android:id="@+id/countryLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/countryCurrency"
+        android:text="Language"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:padding="2dp"/>
+
+
+
+
+
+</RelativeLayout>
 </layout>
