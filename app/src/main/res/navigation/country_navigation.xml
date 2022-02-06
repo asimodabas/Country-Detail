@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/country_navigation"
-    app:startDestination="@id/countryFragment">
+    app:startDestination="@id/feedFragment">
 
     <fragment
         android:id="@+id/countryFragment"
@@ -13,6 +13,10 @@
         <action
             android:id="@+id/action_countryFragment_to_feedFragment"
             app:destination="@id/feedFragment" />
+        <argument
+            android:name="country_Uuid"
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
     <fragment
         android:id="@+id/feedFragment"

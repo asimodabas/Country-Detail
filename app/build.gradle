@@ -37,13 +37,12 @@ android {
 
 dependencies {
 
-    def navVersion = '2.4.0'
+    def navVersion = '2.5.0-alpha01'
     def retrofitVersion = '2.3.0'
     def rxJavaVersion = '2.1.1'
     def preferencesVersion = '1.2.0'
     def roomVersion = '2.4.1'
 
-//support
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'

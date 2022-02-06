@@ -9,6 +9,8 @@ import android.view.ViewGroup
 
 class CountryFragment : Fragment() {
 
+    //private var countryUuid = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -22,5 +24,9 @@ class CountryFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_country, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+    }
 
 }
