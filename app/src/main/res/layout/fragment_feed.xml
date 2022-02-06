@@ -7,7 +7,7 @@
         android:id="@+id/SwipeRefreshLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:context=".FeedFragment">
+        tools:context=".view.FeedFragment">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/countryFragment"
-        android:name="com.asimodabas.country_detail.CountryFragment"
+        android:name="com.asimodabas.country_detail.view.CountryFragment"
         android:label="fragment_country"
         tools:layout="@layout/fragment_country" >
         <action
@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/feedFragment"
-        android:name="com.asimodabas.country_detail.FeedFragment"
+        android:name="com.asimodabas.country_detail.view.FeedFragment"
         android:label="fragment_feed"
         tools:layout="@layout/fragment_feed" >
         <action
