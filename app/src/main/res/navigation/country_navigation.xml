@@ -9,20 +9,20 @@
         android:id="@+id/countryFragment"
         android:name="com.asimodabas.country_detail.view.CountryFragment"
         android:label="fragment_country"
-        tools:layout="@layout/fragment_country" >
+        tools:layout="@layout/fragment_country">
         <action
             android:id="@+id/action_countryFragment_to_feedFragment"
             app:destination="@id/feedFragment" />
         <argument
             android:name="country_Uuid"
-            app:argType="integer"
-            android:defaultValue="0" />
+            android:defaultValue="0"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/feedFragment"
         android:name="com.asimodabas.country_detail.view.FeedFragment"
         android:label="fragment_feed"
-        tools:layout="@layout/fragment_feed" >
+        tools:layout="@layout/fragment_feed">
         <action
             android:id="@+id/action_feedFragment_to_countryFragment"
             app:destination="@id/countryFragment" />

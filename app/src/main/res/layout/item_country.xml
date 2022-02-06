@@ -27,9 +27,9 @@
                 android:layout_height="wrap_content"
                 android:padding="2dp"
                 android:text="Test1"
-                android:textStyle="bold"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
 
             <TextView
