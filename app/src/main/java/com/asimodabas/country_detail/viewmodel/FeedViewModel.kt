@@ -9,4 +9,19 @@ class FeedViewModel:ViewModel() {
     val countryError = MutableLiveData<Boolean>()
     val countryLoading = MutableLiveData<Boolean>()
 
+
+    fun refreshData(){
+
+        //Try Countries
+        val country = Country("Turkey","Asia","Turkish","www.url.com","TRY","Ankara")
+        val country2 = Country("aaa","bbb","ccc","www.url.com","eee","fff")
+
+        val countryList = arrayListOf<Country>(country,country2)
+
+        countries.value = countryList
+        countryError.value = false
+        countryLoading.value = false
+    }
+
+
 }
