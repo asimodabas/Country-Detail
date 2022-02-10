@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.asimodabas.country_detail.CountryFragmentArgs
+import com.asimodabas.country_detail.view.CountryFragmentArgs
 import com.asimodabas.country_detail.R
 
 

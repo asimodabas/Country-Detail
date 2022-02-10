@@ -42,10 +42,11 @@ class FeedFragment : Fragment() {
         countryList.adapter = countryAdapter
 
 
+        observeLiveData()
     }
 
     fun observeLiveData() {
-        viewModel.countries.observe(this, Observer { countrries ->
+        viewModel.countries.observe(viewLifecycleOwner, Observer { countrries ->
 
             countrries?.let {
                 countryList.visibility = View.VISIBLE
@@ -53,6 +54,32 @@ class FeedFragment : Fragment() {
             }
         })
 
+        viewModel.countryError.observe(viewLifecycleOwner, Observer {error ->
+            error?.let {
+                if (it){
+                    countryErrorText.visibility = View.VISIBLE
+                }else{
+                    countryErrorText.visibility = View.GONE
+                }
+            }
+        })
+
+        viewModel.countryLoading.observe(viewLifecycleOwner, Observer {loading ->
+            loading?.let {
+                if (it){
+                    countryLoadingprogessBar.visibility = View.VISIBLE
+                    countryList.visibility = View.GONE
+                    countryErrorText.visibility = View.GONE
+                }else{
+                    countryLoadingprogessBar.visibility = View.GONE
+                }
+            }
+
+        })
+
     }
+
+
+
 
 }
