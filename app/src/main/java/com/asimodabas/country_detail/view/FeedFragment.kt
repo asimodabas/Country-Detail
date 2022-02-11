@@ -45,7 +45,7 @@ class FeedFragment : Fragment() {
         observeLiveData()
     }
 
-    fun observeLiveData() {
+    private fun observeLiveData() {
         viewModel.countries.observe(viewLifecycleOwner, Observer { countrries ->
 
             countrries?.let {
