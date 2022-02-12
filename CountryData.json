@@ -1,0 +1,154 @@
+[
+  {
+    "name": "Algeria",
+    "capital": "Algiers",
+    "region": "Africa",
+    "currency": "DZD",
+    "flag": "https://raw.githubusercontent.com/atilsamancioglu/IA19-DataSetCountries/master/dza.png",
+    "language": "Arabic"
+  },
+  {
+    "name": "Andorra",
+    "capital": "Andorra Vella",
+    "region": "Europe",
+    "currency": "EUR",
+    "flag": "https://raw.githubusercontent.com/atilsamancioglu/IA19-DataSetCountries/master/and.png",
+    "language": "Catalan"
+  },
+  {
+    "name": "Antartica",
+    "capital": "Antartica",
+    "region": "Polar",
+    "currency": "AUD",
+    "flag": "https://raw.githubusercontent.com/atilsamancioglu/IA19-DataSetCountries/master/ata.png",
+    "language": "English"
+  },
+  {
+    "name": "Azerbaijan",
+    "capital": "Baku",
+    "region": "Asia",
+    "currency": "AZN",
+    "flag": "https://raw.githubusercontent.com/atilsamancioglu/IA19-DataSetCountries/master/aze.png",
+    "language": "Azerbaijani"
+  },
+  {
+    "name": "Belgium",
+    "capital": "Brussels",
+    "region": "Europe",
+    "currency": "EUR",
+    "flag": "https://raw.githubusercontent.com/atilsamancioglu/IA19-DataSetCountries/master/bel.png",
+    "language": "French"
+  },
+  {
+    "name": "Brazil",
+    "capital": "Brasilia",
+    "region": "Americas",
+    "currency": "BRL",
+    "flag": "https://raw.githubusercontent.com/atilsamancioglu/IA19-DataSetCountries/master/bra.png",
+    "language": "Portuguese"
+  },
+  {
+    "name": "Cambodia",
+    "capital": "Phnom Penh",
+    "region": "Asia",
+    "currency": "KHR",
+    "flag": "https://raw.githubusercontent.com/atilsamancioglu/IA19-DataSetCountries/master/khm.png",
+    "language": "Khmer"
+  },
+  {
+    "name": "Canada",
+    "capital": "Ottawa",
+    "region": "Americas",
+    "currency": "CAD",
+    "flag": "https://raw.githubusercontent.com/atilsamancioglu/IA19-DataSetCountries/master/can.png",
+    "language": "English"
+  },
+  {
+    "name": "Cuba",
+    "capital": "Havana",
+    "region": "Americas",
+    "currency": "CUC",
+    "flag": "https://raw.githubusercontent.com/atilsamancioglu/IA19-DataSetCountries/master/cub.png",
+    "language": "Spanish"
+  },
+  {
+    "name": "Denmark",
+    "capital": "Copenhagen",
+    "region": "Europe",
+    "currency": "DKK",
+    "flag": "https://raw.githubusercontent.com/atilsamancioglu/IA19-DataSetCountries/master/dnk.png",
+    "language": "Danish"
+  },
+  {
+    "name": "Estonia",
+    "capital": "Tallinn",
+    "region": "Europe",
+    "currency": "EUR",
+    "flag": "https://raw.githubusercontent.com/atilsamancioglu/IA19-DataSetCountries/master/est.png",
+    "language": "Estonian"
+  },
+  {
+    "name": "Finland",
+    "capital": "Helsinki",
+    "region": "Europe",
+    "currency": "EUR",
+    "flag": "https://raw.githubusercontent.com/atilsamancioglu/IA19-DataSetCountries/master/fin.png",
+    "language": "Finnish"
+  },
+  {
+    "name": "Greece",
+    "capital": "Athens",
+    "region": "Europe",
+    "currency": "EUR",
+    "flag": "https://raw.githubusercontent.com/atilsamancioglu/IA19-DataSetCountries/master/grc.png",
+    "language": "Greek"
+  },
+  {
+    "name": "Haiti",
+    "capital": "Port-au-Prince",
+    "region": "Americas",
+    "currency": "HTG",
+    "flag": "https://raw.githubusercontent.com/atilsamancioglu/IA19-DataSetCountries/master/hti.png",
+    "language": "Haitian"
+  },
+  {
+    "name": "Indonesia",
+    "capital": "Jakarta",
+    "region": "Asia",
+    "currency": "IDR",
+    "flag": "https://raw.githubusercontent.com/atilsamancioglu/IA19-DataSetCountries/master/idn.png",
+    "language": "Indonesian"
+  },
+  {
+    "name": "Ireland",
+    "capital": "Dublin",
+    "region": "Europe",
+    "currency": "EUR",
+    "flag": "https://raw.githubusercontent.com/atilsamancioglu/IA19-DataSetCountries/master/irl.png",
+    "language": "English"
+  },
+  {
+    "name": "Japan",
+    "capital": "Tokyo",
+    "region": "Asia",
+    "currency": "JPY",
+    "flag": "https://raw.githubusercontent.com/atilsamancioglu/IA19-DataSetCountries/master/jpn.png",
+    "language": "Japanese"
+  },
+  {
+    "name": "Russian Federation",
+    "capital": "Moscow",
+    "region": "Europe",
+    "currency": "RUB",
+    "flag": "https://raw.githubusercontent.com/atilsamancioglu/IA19-DataSetCountries/master/rus.png",
+    "language": "Russian"
+  },
+  {
+    "name": "Turkey",
+    "capital": "Ankara",
+    "region": "Asia",
+    "currency": "TRY",
+    "flag": "https://raw.githubusercontent.com/atilsamancioglu/IA19-DataSetCountries/master/tur.png",
+    "language": "Turkish"
+  }
+]
