@@ -42,6 +42,17 @@ class FeedFragment : Fragment() {
         countryList.adapter = countryAdapter
 
 
+        swipeRefreshLayout.setOnRefreshListener {
+
+            countryList.visibility = View.GONE
+            countryErrorText.visibility = View.GONE
+            countryLoadingprogessBar.visibility = View.VISIBLE
+
+            viewModel.refreshData()
+
+            swipeRefreshLayout.isRefreshing = false
+        }
+
         observeLiveData()
     }
 
@@ -54,23 +65,23 @@ class FeedFragment : Fragment() {
             }
         })
 
-        viewModel.countryError.observe(viewLifecycleOwner, Observer {error ->
+        viewModel.countryError.observe(viewLifecycleOwner, Observer { error ->
             error?.let {
-                if (it){
+                if (it) {
                     countryErrorText.visibility = View.VISIBLE
-                }else{
+                } else {
                     countryErrorText.visibility = View.GONE
                 }
             }
         })
 
-        viewModel.countryLoading.observe(viewLifecycleOwner, Observer {loading ->
+        viewModel.countryLoading.observe(viewLifecycleOwner, Observer { loading ->
             loading?.let {
-                if (it){
+                if (it) {
                     countryLoadingprogessBar.visibility = View.VISIBLE
                     countryList.visibility = View.GONE
                     countryErrorText.visibility = View.GONE
-                }else{
+                } else {
                     countryLoadingprogessBar.visibility = View.GONE
                 }
             }
@@ -78,8 +89,6 @@ class FeedFragment : Fragment() {
         })
 
     }
-
-
 
 
 }
