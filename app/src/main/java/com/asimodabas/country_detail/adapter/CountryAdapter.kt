@@ -34,7 +34,10 @@ class CountryAdapter(val countryList: ArrayList<Country>) :
             val action = FeedFragmentDirections.actionFeedFragmentToCountryFragment()
             Navigation.findNavController(it).navigate(action)
         }
-        holder.view.imageView.downloadUrl(countryList[position].imageUrl, placeHolderProgesBar(holder.view.context))
+        holder.view.imageView.downloadUrl(
+            countryList[position].imageUrl,
+            placeHolderProgesBar(holder.view.context)
+        )
     }
 
     override fun getItemCount(): Int {

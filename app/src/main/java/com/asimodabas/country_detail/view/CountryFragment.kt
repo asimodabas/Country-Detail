@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.fragment_country.*
 
 class CountryFragment : Fragment() {
 
-    private lateinit var viewModel :CountryViewModel
+    private lateinit var viewModel: CountryViewModel
     private var countryUuid = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,11 +48,11 @@ class CountryFragment : Fragment() {
     private fun observeLiveData() {
         viewModel.countryLiveData.observe(viewLifecycleOwner, Observer {
             it?.let {
-                countryName.text=it.countryName
-                countryCapital.text=it.countryCapital
-                countryCurrency.text=it.countryCurrency
-                countryLanguage.text=it.countryLanguage
-                countryRegion.text=it.countryRegion
+                countryName.text = it.countryName
+                countryCapital.text = it.countryCapital
+                countryCurrency.text = it.countryCurrency
+                countryLanguage.text = it.countryLanguage
+                countryRegion.text = it.countryRegion
             }
         })
     }

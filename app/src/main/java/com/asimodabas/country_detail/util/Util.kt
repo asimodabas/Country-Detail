@@ -13,7 +13,7 @@ fun String.myExtension (myParameter:String){
     println(myParameter)}
 */
 
-fun ImageView.downloadUrl(url : String?,progressDrawable: CircularProgressDrawable){
+fun ImageView.downloadUrl(url: String?, progressDrawable: CircularProgressDrawable) {
 
     val options = RequestOptions()
         .placeholder(progressDrawable)
@@ -25,7 +25,7 @@ fun ImageView.downloadUrl(url : String?,progressDrawable: CircularProgressDrawab
         .into(this)
 }
 
-fun placeHolderProgesBar(context :Context):CircularProgressDrawable{
+fun placeHolderProgesBar(context: Context): CircularProgressDrawable {
 
     return CircularProgressDrawable(context).apply {
         strokeWidth = 6f

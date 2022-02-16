@@ -30,7 +30,9 @@ data class Country(
 
     @ColumnInfo(name = "capital")
     @SerializedName("capital")
-    val countryCapital: String?){
+    val countryCapital: String?
+) {
+
     @PrimaryKey(autoGenerate = true)
-    var uuid : Int=0
+    var uuid: Int = 0
 }
