@@ -1,9 +1,11 @@
 package com.asimodabas.country_detail.service
 
+import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import com.asimodabas.country_detail.model.Country
 
+@Dao
 interface CountryDao {
 
     @Insert
