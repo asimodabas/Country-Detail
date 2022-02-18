@@ -34,9 +34,7 @@ class FeedViewModel : ViewModel() {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeWith(object : DisposableSingleObserver<List<Country>>(){
                     override fun onSuccess(t: List<Country>) {
-                        countries.value = t
-                        countryError.value = false
-                        countryLoading.value = false
+                        storeInSQLite(t)
                     }
 
                     override fun onError(e: Throwable) {
@@ -49,6 +47,13 @@ class FeedViewModel : ViewModel() {
 
         )
     }
+    private fun showCountry(countryList : List<Country>){
+        countries.value = countryList
+        countryError.value = false
+        countryLoading.value = false
+    }
+    private fun storeInSQLite(list: List<Country>){
 
+    }
 
 }
