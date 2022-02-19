@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import com.asimodabas.country_detail.model.Country
 import com.asimodabas.country_detail.service.CountryDatabase
 import com.asimodabas.country_detail.service.CountryServiceAPI
+import com.asimodabas.country_detail.util.CustomSharedPreferences
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.observers.DisposableSingleObserver
@@ -16,6 +17,7 @@ class FeedViewModel(application: Application) : BaseViewModel(application) {
 
     private val countryApiService = CountryServiceAPI()
     private val disposable = CompositeDisposable()
+    private var customPreferinces = CustomSharedPreferences(getApplication())
 
     val countries = MutableLiveData<List<Country>>()
     val countryError = MutableLiveData<Boolean>()
@@ -63,12 +65,13 @@ class FeedViewModel(application: Application) : BaseViewModel(application) {
             dao.deleteAllCountries()
             val listLong = dao.insertAll(*list.toTypedArray())
             var i = 0
-            while (i<list.size){
+            while (i < list.size) {
                 list[i].uuid = listLong[i].toInt()
-                i = i+1
+                i = i + 1
             }
             showCountry(list)
         }
+        customPreferinces.saveTime(System.nanoTime())
     }
 
 }
