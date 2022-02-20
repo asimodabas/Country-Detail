@@ -10,6 +10,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.asimodabas.country_detail.view.CountryFragmentArgs
 import com.asimodabas.country_detail.R
+import com.asimodabas.country_detail.model.Country
+import com.asimodabas.country_detail.util.downloadUrl
+import com.asimodabas.country_detail.util.placeHolderProgesBar
 import com.asimodabas.country_detail.viewmodel.CountryViewModel
 import kotlinx.android.synthetic.main.fragment_country.*
 
@@ -35,24 +38,28 @@ class CountryFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel = ViewModelProviders.of(this).get(CountryViewModel::class.java)
-        viewModel.getDataRoom()
-
         arguments?.let {
             countryUuid = CountryFragmentArgs.fromBundle(it).countryUuid
         }
+
+        viewModel = ViewModelProviders.of(this).get(CountryViewModel::class.java)
+        viewModel.getDataRoom(countryUuid)
+
 
         observeLiveData()
     }
 
     private fun observeLiveData() {
-        viewModel.countryLiveData.observe(viewLifecycleOwner, Observer {
-            it?.let {
-                countryName.text = it.countryName
-                countryCapital.text = it.countryCapital
-                countryCurrency.text = it.countryCurrency
-                countryLanguage.text = it.countryLanguage
-                countryRegion.text = it.countryRegion
+        viewModel.countryLiveData.observe(viewLifecycleOwner, Observer {country->
+            country?.let {
+                countryName.text = country.countryName
+                countryCapital.text = country.countryCapital
+                countryCurrency.text = country.countryCurrency
+                countryLanguage.text = country.countryLanguage
+                countryRegion.text = country.countryRegion
+                context?.let {
+                    countryimageView.downloadUrl(country.imageUrl, placeHolderProgesBar(it))
+                }
             }
         })
     }
