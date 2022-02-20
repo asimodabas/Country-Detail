@@ -5,11 +5,14 @@
 
         android:layout_width="match_parent"
         android:layout_height="125dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="#737070"
+        >
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="0dp"
+            android:background="@drawable/textview_costomize"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="4dp"
