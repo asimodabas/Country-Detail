@@ -18,7 +18,7 @@ class FeedViewModel(application: Application) : BaseViewModel(application) {
     private val countryApiService = CountryServiceAPI()
     private val disposable = CompositeDisposable()
     private var customPreferinces = CustomSharedPreferences(getApplication())
-    private val refreshTime = 5*60*1000*1000*1000L
+    private val refreshTime = 5 * 60 * 1000 * 1000 * 1000L
 
     val countries = MutableLiveData<List<Country>>()
     val countryError = MutableLiveData<Boolean>()
@@ -27,20 +27,22 @@ class FeedViewModel(application: Application) : BaseViewModel(application) {
 
     fun refreshData() {
         val updateTime = customPreferinces.getTime()
-        if (updateTime!=null && updateTime != 0L && System.nanoTime()-updateTime < refreshTime){
+        if (updateTime != null && updateTime != 0L && System.nanoTime() - updateTime < refreshTime) {
             getDataSQLite()
-        }else{
+        } else {
             getDataAPI()
         }
     }
-    fun refreshAPI(){
+
+    fun refreshAPI() {
         getDataAPI()
     }
 
-    private fun getDataSQLite(){
+    private fun getDataSQLite() {
         countryLoading.value = true
         launch {
-            val countries = CountryDatabase(getApplication()).countryDao().getAllCountries() // All data -> countries
+            val countries = CountryDatabase(getApplication()).countryDao()
+                .getAllCountries() // All data -> countries
             showCountry(countries)
         }
     }
@@ -88,6 +90,11 @@ class FeedViewModel(application: Application) : BaseViewModel(application) {
             showCountry(list)
         }
         customPreferinces.saveTime(System.nanoTime())
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        disposable.clear()
     }
 
 }

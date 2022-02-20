@@ -32,6 +32,7 @@ class CountryAdapter(val countryList: ArrayList<Country>) :
 
         holder.view.setOnClickListener {
             val action = FeedFragmentDirections.actionFeedFragmentToCountryFragment()
+            action.countryUuid = countryList[position].uuid
             Navigation.findNavController(it).navigate(action)
         }
         holder.view.imageView.downloadUrl(

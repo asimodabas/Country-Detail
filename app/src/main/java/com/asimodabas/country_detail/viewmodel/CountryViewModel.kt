@@ -11,14 +11,11 @@ class CountryViewModel(application: Application) : BaseViewModel(application) {
 
     val countryLiveData = MutableLiveData<Country>()
 
-    fun getDataRoom(uuid:Int) {
-launch {
-    val dao = CountryDatabase(getApplication())
-        .countryDao()
-    val country = dao.getCountry(uuid)
-    countryLiveData.value=country
-}
-
+    fun getDataRoom(uuid: Int) {
+        launch {
+            val dao = CountryDatabase(getApplication()).countryDao()
+            val country = dao.getCountry(uuid)
+            countryLiveData.value = country
+        }
     }
-
 }

@@ -10,7 +10,7 @@ import com.bumptech.glide.request.RequestOptions
 /*
 //Estension add
 fun String.myExtension (myParameter:String){
-    println(myParameter)}
+println(myParameter)}
 */
 
 fun ImageView.downloadUrl(url: String?, progressDrawable: CircularProgressDrawable) {
