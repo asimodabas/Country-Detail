@@ -23,8 +23,13 @@ class CountryAdapter(val countryList: ArrayList<Country>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryViewHolder {
         val infilater = LayoutInflater.from(parent.context)
-      //val view = infilater.inflate(R.layout.item_country, parent, false)
-        val view = DataBindingUtil.inflate<ItemCountryBinding>(infilater,R.layout.item_country,parent,false)
+        //val view = infilater.inflate(R.layout.item_country, parent, false)
+        val view = DataBindingUtil.inflate<ItemCountryBinding>(
+            infilater,
+            R.layout.item_country,
+            parent,
+            false
+        )
         return CountryViewHolder(view)
     }
 

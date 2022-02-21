@@ -2,6 +2,7 @@ package com.asimodabas.country_detail.util
 
 import android.content.Context
 import android.widget.ImageView
+import androidx.databinding.BindingAdapter
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.asimodabas.country_detail.R
 import com.bumptech.glide.Glide
@@ -32,4 +33,10 @@ fun placeHolderProgesBar(context: Context): CircularProgressDrawable {
         centerRadius = 35f
         start()
     }
+}
+
+@BindingAdapter("android:downloadUrl")
+fun downloadImage(view : ImageView,url:String?){
+    view.downloadUrl(url, placeHolderProgesBar(view.context))
+
 }
