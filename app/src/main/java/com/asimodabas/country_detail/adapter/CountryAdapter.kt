@@ -15,7 +15,8 @@ import com.asimodabas.country_detail.view.FeedFragmentDirections
 import kotlinx.android.synthetic.main.item_country.view.*
 
 class CountryAdapter(val countryList: ArrayList<Country>) :
-    RecyclerView.Adapter<CountryAdapter.CountryViewHolder>() {
+    RecyclerView.Adapter<CountryAdapter.CountryViewHolder>(),
+    CountryClickListener {
 
     class CountryViewHolder(var view: ItemCountryBinding) : RecyclerView.ViewHolder(view.root) {
 
@@ -36,6 +37,7 @@ class CountryAdapter(val countryList: ArrayList<Country>) :
     override fun onBindViewHolder(holder: CountryViewHolder, position: Int) {
 
         holder.view.country = countryList[position]
+        holder.view.listener = this
 
         /*
 
@@ -63,6 +65,13 @@ class CountryAdapter(val countryList: ArrayList<Country>) :
         countryList.clear()
         countryList.addAll(newCountryList)
         notifyDataSetChanged()
+    }
+
+    override fun CountryClick(vie: View) {
+        val uuid = vie.country_uuid_Text.text.toString().toInt()
+        val action = FeedFragmentDirections.actionFeedFragmentToCountryFragment()
+        action.countryUuid = uuid
+        Navigation.findNavController(vie).navigate(action)
     }
 
 }
