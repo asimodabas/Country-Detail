@@ -3,6 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="selectedCountry"
+            type="com.asimodabas.country_detail.model.Country" />
+    </data>
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,6 +23,7 @@
             android:layout_height="170dp"
             android:layout_marginTop="25dp"
             android:background="@drawable/textview_costomize"
+            android:downloadUrl="@{selectedCountry.imageUrl}"
             android:minHeight="200dp"
             android:padding="15dp"
             android:scaleType="fitCenter"
@@ -32,7 +41,7 @@
             android:layout_marginTop="25dp"
             android:background="@drawable/textview_costomize"
             android:gravity="center"
-            android:text="Name"
+            android:text="@{selectedCountry.countryName}"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -50,7 +59,7 @@
             android:layout_marginTop="25dp"
             android:background="@drawable/textview_costomize"
             android:gravity="center"
-            android:text="Capital"
+            android:text="@{selectedCountry.countryCapital}"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
@@ -67,7 +76,7 @@
             android:background="@drawable/textview_costomize"
             android:gravity="center"
             android:padding="2dp"
-            android:text="Region"
+            android:text="@{selectedCountry.countryRegion}"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.504"
@@ -84,7 +93,7 @@
             android:background="@drawable/textview_costomize"
             android:gravity="center"
             android:padding="2dp"
-            android:text="Currency"
+            android:text="@{selectedCountry.countryCurrency}"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.504"
@@ -101,7 +110,7 @@
             android:background="@drawable/textview_costomize"
             android:gravity="center"
             android:padding="2dp"
-            android:text="Language"
+            android:text="@{selectedCountry.countryLanguage}"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.504"
