@@ -22,12 +22,6 @@ class CountryFragment : Fragment() {
     private lateinit var dataBinding: FragmentCountryBinding
     private var countryUuid = 0
 
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -56,16 +50,6 @@ class CountryFragment : Fragment() {
             country?.let {
 
                 dataBinding.selectedCountry = country
-
-            /*
-                countryName.text = country.countryName
-                countryCapital.text = country.countryCapital
-                countryCurrency.text = country.countryCurrency
-                countryLanguage.text = country.countryLanguage
-                countryRegion.text = country.countryRegion
-                context?.let {
-                    countryimageView.downloadUrl(country.imageUrl, placeHolderProgesBar(it) }
-            */
             }
         })
     }

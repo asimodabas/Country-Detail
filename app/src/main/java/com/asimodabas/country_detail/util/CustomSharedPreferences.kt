@@ -8,7 +8,6 @@ import androidx.preference.PreferenceManager
 class CustomSharedPreferences {
 
     companion object {
-
         private val PREFERINCES_TIME = "preferincestime"
         private var sharedPreferences: SharedPreferences? = null
 
@@ -36,6 +35,4 @@ class CustomSharedPreferences {
     }
 
     fun getTime() = sharedPreferences?.getLong(PREFERINCES_TIME,0)
-
-
 }

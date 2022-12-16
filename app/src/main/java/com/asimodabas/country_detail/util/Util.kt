@@ -8,12 +8,6 @@ import com.asimodabas.country_detail.R
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
-/*
-//Estension add
-fun String.myExtension (myParameter:String){
-println(myParameter)}
-*/
-
 fun ImageView.downloadUrl(url: String?, progressDrawable: CircularProgressDrawable) {
 
     val options = RequestOptions()
@@ -36,7 +30,6 @@ fun placeHolderProgesBar(context: Context): CircularProgressDrawable {
 }
 
 @BindingAdapter("android:downloadUrl")
-fun downloadImage(view : ImageView,url:String?){
+fun downloadImage(view: ImageView, url: String?) {
     view.downloadUrl(url, placeHolderProgesBar(view.context))
-
 }

@@ -2,7 +2,6 @@ package com.asimodabas.country_detail.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import com.asimodabas.country_detail.model.Country
 import com.asimodabas.country_detail.service.CountryDatabase
 import com.asimodabas.country_detail.service.CountryServiceAPI
@@ -48,7 +47,6 @@ class FeedViewModel(application: Application) : BaseViewModel(application) {
     }
 
     private fun getDataAPI() {
-
         countryLoading.value = true
 
         disposable.add(
@@ -67,7 +65,6 @@ class FeedViewModel(application: Application) : BaseViewModel(application) {
                     }
 
                 })
-
         )
     }
 
@@ -96,5 +93,4 @@ class FeedViewModel(application: Application) : BaseViewModel(application) {
         super.onCleared()
         disposable.clear()
     }
-
 }

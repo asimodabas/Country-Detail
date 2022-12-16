@@ -9,14 +9,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.asimodabas.country_detail.R
 import com.asimodabas.country_detail.databinding.ItemCountryBinding
 import com.asimodabas.country_detail.model.Country
-import com.asimodabas.country_detail.util.downloadUrl
-import com.asimodabas.country_detail.util.placeHolderProgesBar
 import com.asimodabas.country_detail.view.FeedFragmentDirections
-import kotlinx.android.synthetic.main.item_country.view.*
+import kotlinx.android.synthetic.main.item_country.view.country_uuid_Text
 
 class CountryAdapter(val countryList: ArrayList<Country>) :
-    RecyclerView.Adapter<CountryAdapter.CountryViewHolder>(),
-    CountryClickListener {
+    RecyclerView.Adapter<CountryAdapter.CountryViewHolder>(), CountryClickListener {
 
     class CountryViewHolder(var view: ItemCountryBinding) : RecyclerView.ViewHolder(view.root) {
 
@@ -26,10 +23,7 @@ class CountryAdapter(val countryList: ArrayList<Country>) :
         val infilater = LayoutInflater.from(parent.context)
         //val view = infilater.inflate(R.layout.item_country, parent, false)
         val view = DataBindingUtil.inflate<ItemCountryBinding>(
-            infilater,
-            R.layout.item_country,
-            parent,
-            false
+            infilater, R.layout.item_country, parent, false
         )
         return CountryViewHolder(view)
     }
@@ -38,22 +32,6 @@ class CountryAdapter(val countryList: ArrayList<Country>) :
 
         holder.view.country = countryList[position]
         holder.view.listener = this
-
-        /*
-
-        holder.view.name.text = countryList[position].countryName
-        holder.view.region.text = countryList[position].countryRegion
-
-        holder.view.setOnClickListener {
-            val action = FeedFragmentDirections.actionFeedFragmentToCountryFragment()
-            action.countryUuid = countryList[position].uuid
-            Navigation.findNavController(it).navigate(action)
-        }
-        holder.view.imageView.downloadUrl(
-            countryList[position].imageUrl,
-            placeHolderProgesBar(holder.view.context))
-
-        */
     }
 
     override fun getItemCount(): Int {
