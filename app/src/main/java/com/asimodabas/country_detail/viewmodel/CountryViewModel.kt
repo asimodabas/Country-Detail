@@ -2,7 +2,6 @@ package com.asimodabas.country_detail.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import com.asimodabas.country_detail.model.Country
 import com.asimodabas.country_detail.service.CountryDatabase
 import kotlinx.coroutines.launch

@@ -8,29 +8,17 @@ import com.google.gson.annotations.SerializedName
 @Entity
 data class Country(
 
-    @ColumnInfo(name = "name")
-    @SerializedName("name")
-    val countryName: String?,
+    @ColumnInfo(name = "name") @SerializedName("name") val countryName: String?,
 
-    @ColumnInfo(name = "region")
-    @SerializedName("region")
-    val countryRegion: String?,
+    @ColumnInfo(name = "region") @SerializedName("region") val countryRegion: String?,
 
-    @ColumnInfo(name = "language")
-    @SerializedName("language")
-    val countryLanguage: String?,
+    @ColumnInfo(name = "language") @SerializedName("language") val countryLanguage: String?,
 
-    @ColumnInfo(name = "flag")
-    @SerializedName("flag")
-    val imageUrl: String?,
+    @ColumnInfo(name = "flag") @SerializedName("flag") val imageUrl: String?,
 
-    @ColumnInfo(name = "currency")
-    @SerializedName("currency")
-    val countryCurrency: String?,
+    @ColumnInfo(name = "currency") @SerializedName("currency") val countryCurrency: String?,
 
-    @ColumnInfo(name = "capital")
-    @SerializedName("capital")
-    val countryCapital: String?
+    @ColumnInfo(name = "capital") @SerializedName("capital") val countryCapital: String?
 ) {
 
     @PrimaryKey(autoGenerate = true)

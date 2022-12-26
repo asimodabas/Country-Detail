@@ -10,10 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.asimodabas.country_detail.R
 import com.asimodabas.country_detail.databinding.FragmentCountryBinding
-import com.asimodabas.country_detail.util.downloadUrl
-import com.asimodabas.country_detail.util.placeHolderProgesBar
 import com.asimodabas.country_detail.viewmodel.CountryViewModel
-import kotlinx.android.synthetic.main.fragment_country.*
 
 
 class CountryFragment : Fragment() {
@@ -23,11 +20,10 @@ class CountryFragment : Fragment() {
     private var countryUuid = 0
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        dataBinding = DataBindingUtil.inflate(inflater,R.layout.fragment_country,container,false)
+        dataBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_country, container, false)
         return dataBinding.root
     }
 
@@ -40,7 +36,6 @@ class CountryFragment : Fragment() {
 
         viewModel = ViewModelProviders.of(this).get(CountryViewModel::class.java)
         viewModel.getDataRoom(countryUuid)
-
 
         observeLiveData()
     }

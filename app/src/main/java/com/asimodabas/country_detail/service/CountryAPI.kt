@@ -10,6 +10,4 @@ interface CountryAPI {
 
     @GET("asimodabas/Country-Detail/master/CountryData.json")
     fun getCountry(): Single<List<Country>>
-
-
 }

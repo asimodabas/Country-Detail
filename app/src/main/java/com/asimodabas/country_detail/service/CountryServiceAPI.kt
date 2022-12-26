@@ -12,12 +12,10 @@ class CountryServiceAPI {
 
     private val BASE_URL = "https://raw.githubusercontent.com/"
 
-    private val api = Retrofit.Builder()
-        .baseUrl(BASE_URL)
-        .addConverterFactory(GsonConverterFactory.create())
-        .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-        .build()
-        .create(CountryAPI::class.java)
+    private val api =
+        Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create())
+            .addCallAdapterFactory(RxJava2CallAdapterFactory.create()).build()
+            .create(CountryAPI::class.java)
 
     fun getData(): Single<List<Country>> {
         return api.getCountry()

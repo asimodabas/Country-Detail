@@ -25,9 +25,7 @@ abstract class CountryDatabase : RoomDatabase() {
         }
 
         private fun makeDatabase(context: Context) = Room.databaseBuilder(
-            context.applicationContext,
-            CountryDatabase::class.java,
-            "countrydatabase"
+            context.applicationContext, CountryDatabase::class.java, "countrydatabase"
         ).build()
     }
 }

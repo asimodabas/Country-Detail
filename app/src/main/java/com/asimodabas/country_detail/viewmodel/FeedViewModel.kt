@@ -50,8 +50,7 @@ class FeedViewModel(application: Application) : BaseViewModel(application) {
         countryLoading.value = true
 
         disposable.add(
-            countryApiService.getData()
-                .subscribeOn(Schedulers.newThread())
+            countryApiService.getData().subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeWith(object : DisposableSingleObserver<List<Country>>() {
                     override fun onSuccess(t: List<Country>) {

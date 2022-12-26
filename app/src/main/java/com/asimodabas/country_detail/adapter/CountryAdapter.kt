@@ -51,5 +51,4 @@ class CountryAdapter(val countryList: ArrayList<Country>) :
         action.countryUuid = uuid
         Navigation.findNavController(vie).navigate(action)
     }
-
 }
